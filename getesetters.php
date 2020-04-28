@@ -38,8 +38,8 @@ $logar -> setsenha("123456")  ;
 $logar-> Logar();
  echo "<br>";
 
- echo $logar->getEmail();
- echo $logar->getSenha();
+ echo $logar->getEmail();  // MOSTRA O EMAIL
+ echo $logar->getSenha(); // MOSTRA A SENHA
 
  ?>
 
