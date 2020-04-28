@@ -1,7 +1,25 @@
 <?php
 class Login{
-  public $email;
-  public $senha;
+  private $email;
+  private $senha;
+
+  public function getEmail(){
+    return $this ->email;
+  }
+
+  public function setEmail($e){
+    $email = filter_var($e, FILTER_SANITIZE_EMAIL);// LIMPA CARACTERES QUE NAO SAO RECONHECIDOS COMO EMAIL NO PHP
+    $this->email = $e;
+  }
+
+  public function getSenha(){
+    return $this->senha;
+  }
+
+  public function setSenha($s){
+      $this->senha = $s;
+  }
+
 
   public function Logar(){
     if($this->email == "teste@teste.com" and $this->senha == "123456"):
@@ -15,9 +33,13 @@ class Login{
 // ATRIBUTOS OQUE NAO É NADA INTERESSANTE DE SE FAZER
 // SO PODEMOS ACESSAR OS ATRIBUTOS FORA DA CLASSE QUANDO ELES SÃO PUBLICOS(PUVLIC)
 $logar = new Login();
-$logar -> email = "teste@teste.com";
-$logar -> senha = "1234567";
+$logar -> setemail("teste@teste.com") ;
+$logar -> setsenha("123456")  ;
 $logar-> Logar();
+ echo "<br>";
 
+ echo $logar->getEmail();
+ echo $logar->getSenha();
 
  ?>
+
