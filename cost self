@@ -1,0 +1,19 @@
+<?php
+  //Costantes, SELF E PARENT
+
+  class Pessoa{
+
+    const nome = "Rodrigo";
+
+    public function exibirNome(){
+      echo self::nome; // self na hora de chamar uma const(costante).
+
+    }
+  }
+$pessoa = new Pessoa();
+$pessoa->exibirNome();
+
+//para referenciar a cost dentro do escopo da class precisamos do self:: e nome da consta
+
+
+ ?>
