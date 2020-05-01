@@ -1,8 +1,13 @@
 <?php
-require 'classes/produto.php';
-require 'models/produto.php';
+// autoload da pastava vendor do composer
 
-$produto = new \classes\Produto();
-$produto->mostrarDetalhes();
+require_once 'vendor/autoload.php';
+
+use Cocur\Slugify\Slugify;
+
+$slug =  new Slugify();
+
+echo $slug->slugify('teste com slug');
+
 
  ?>
